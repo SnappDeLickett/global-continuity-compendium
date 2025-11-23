@@ -6340,3 +6340,161 @@ IMPLEMENTATION NOTES
 END OF PROTOCOL ENTRY — READY FOR COPY/PASTE
 ===========================================================
 
+# ==========================================================
+#  SCRIPT ERROR LOG INTEGRATION PROTOCOL (SELI-P)
+#  Version: 2025-11-24 · For inclusion in Global Compendium
+# ==========================================================
+
+## 1. PURPOSE
+To prevent repeated Google Apps Script errors, wasted time, and redundant debugging by requiring ChatGPT to:
+1. Read the official Script Error Log before generating ANY script.
+2. Avoid all known errors listed in the log.
+3. Generate standardized new log entries when new errors occur.
+4. Direct the user to update the GitHub error-log file.
+5. Maintain continuous alignment between protocol behavior and known error patterns.
+
+---
+
+## 2. AUTHORITATIVE FILE LOCATION
+ChatGPT must ALWAYS read the Script Error Log from THIS exact RAW URL:
+
+**RAW TEXT URL (MANDATORY):**
+https://raw.githubusercontent.com/SnappDeLickett/global-continuity-compendium/main/script-error-log.md
+
+This URL must be accessed *every time* a script is created or revised.
+
+If the URL ever changes, ChatGPT must halt script generation and request an updated URL.
+
+---
+
+## 3. REQUIRED PRE-SCRIPT CHECK (MANDATORY)
+Before generating ANY Google Apps Script (CW-A, CW-B, Quiz, Test, Unity Test, or SS8 Scripts):
+
+### 3.1 — ChatGPT MUST:
+- Access the RAW error-log file at the URL above.
+- Read its full contents.
+- Parse each row in the error table.
+- Extract:
+  - method failures,
+  - object-type mismatches,
+  - deprecated calls,
+  - problems with navigation methods,
+  - Google Forms limitations,
+  - execution-time patterns,
+  - dataset loading failures,
+  - structural errors,
+  - common user-facing settings that must be toggled manually.
+
+### 3.2 — ChatGPT MUST:
+- Apply every known fix.
+- Avoid every known failing method.
+- Adjust its script architecture accordingly.
+
+### 3.3 — ChatGPT MUST ANNOUNCE:
+Before giving any script, ChatGPT must state:
+
+> “SELI-P: Script Error Log successfully loaded and checked. All known errors avoided.”
+
+If ChatGPT cannot read the log → script generation must STOP until resolved.
+
+---
+
+## 4. STANDARD LOG FORMAT (MANDATORY)
+All error-log entries must follow THIS exact table schema:
+
+| Timestamp (ET) | Artifact / Script Name | Exact Error Message | Root Cause / Diagnosis | Fix Implemented | Status |
+
+Where:
+- **Timestamp** = 24-hour ET
+- **Error Message** = EXACT text from execution log
+- **Status** = OPEN or CLOSED
+
+ChatGPT must never alter the table structure.
+
+---
+
+## 5. WHEN A NEW ERROR OCCURS
+If a newly executed script returns an error:
+
+### 5.1 — ChatGPT MUST:
+- Analyze the error.
+- Diagnose root cause.
+- State the necessary fix.
+- Assemble a complete table row in the EXACT format above.
+- Present it to the user inside a code block.
+
+### 5.2 — ChatGPT MUST REMIND THE USER:
+After generating the log row, ChatGPT must instruct the user:
+
+> “Please paste this row into the GitHub Script Error Log.”
+
+### 5.3 — ChatGPT MUST:
+- Integrate this new error pattern into all future scripts.
+- Treat OPEN errors as unresolved until the table row is updated by the user.
+
+---
+
+## 6. SCRIPT GENERATION RULE (MANDATORY)
+No script may be generated unless ALL of the following occur:
+
+1. SELI-P pre-check is executed.
+2. Global Continuity Compendium is reviewed.
+3. Script Error Log is loaded from the RAW URL.
+4. Known error patterns are suppressed or corrected.
+5. ChatGPT produces a SELI-P confirmation message.
+
+If any of these steps are skipped, script output is INVALID.
+
+---
+
+## 7. POST-SCRIPT BEHAVIOR
+If the script executes successfully with no errors:
+
+- ChatGPT must state:
+  > “SELI-P: Execution yielded no new errors.”
+
+If the script fails:
+
+- ChatGPT must generate a new table row (Section 5).
+- Remind the user to update GitHub.
+- Adjust future scripts to avoid recurrence.
+
+---
+
+## 8. SPECIAL INTEGRATION WITH FORM PROTOCOLS
+SELI-P overrides all previous handling of:
+- Deprecated navigation methods  
+- Deprecated choice creation methods  
+- Gradeable item casting  
+- `.asPageBreakItem()`  
+- `.setGoToPageNavigationType()`  
+- `.setPageNavigation()`  
+- Any method found to be unsupported in a Google Forms context  
+
+When SELI-P and another protocol conflict → SELI-P takes priority for script safety.
+
+---
+
+## 9. QA REQUIREMENT
+Before any script is delivered to the user:
+- Run SELI-P
+- Run PCEE (Pre-Creation Error Enforcement)
+- Run PAEE (Post-Audit Error Enforcement)
+- Confirm dataset fidelity
+- Confirm naming protocols
+- Confirm Global Compendium alignment
+
+---
+
+## 10. COMPLIANCE STATEMENT (MANDATORY)
+ChatGPT must DECLARE compliance each time:
+
+> “SELI-P Compliance: Error Log loaded, parsed, and applied.”
+
+Only then may scripts be generated.
+
+---
+
+# ==========================================================
+# END OF PROTOCOL — SCRIPT ERROR LOG INTEGRATION PROTOCOL
+# ==========================================================
