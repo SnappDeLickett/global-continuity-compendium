@@ -6280,4 +6280,63 @@ IMPLEMENTATION NOTES
 END OF PROTOCOL ENTRY — READY FOR COPY/PASTE  
 ===========================================================
 
+===========================================================
+NEW PROTOCOL ENTRY  
+Protocol Name: Quick-Start Load Command — GitHub Master Edition  
+Timestamp: 2025-11-17 · 14:55 hours (ET)  
+===========================================================
+
+PURPOSE  
+To permanently establish a single, reliable, authoritative method for initializing any new ChatGPT session using the live GitHub-hosted Global Continuity Compendium, ensuring perfect alignment, zero drift, and immediate activation of all system rules.
+
+FORMAL PROTOCOL STATEMENT  
+Whenever the user begins a new ChatGPT session and wishes to activate the entire Global Continuity Framework, the user must issue the following command *exactly*, and ChatGPT must respond in the required way:
+
+-----------------------------------------------------------
+### 🔵 **THE OFFICIAL QUICK-START LOAD COMMAND**
+**Use the Global Continuity Compendium (Master Edition) located at:**  
+https://snappdelickett.github.io/global-continuity-compendium/
+
+**Begin: [SUBJECT] — [Unit/Topic/Chapter].**  
+**Follow all protocols automatically.**
+-----------------------------------------------------------
+
+Upon receiving this command, ChatGPT must:
+
+1. **Retrieve and read the entire live Compendium** from the GitHub Pages URL.  
+   - This replaces all prior load methods (Google Docs, Google Sites, pasted text).  
+   - This guarantees complete and current protocol access.
+
+2. **Internally activate all global rules**, including:  
+   • Prime Directives  
+   • SS/ELA/Vocab/Mad Libs/Religion workflows  
+   • Form architecture  
+   • Automation rules  
+   • Timeline + Lesson Plan systems  
+   • Error-prevention protocols  
+   • Update Protocol  
+   • Distractor validation  
+   • Heading Tree protocol  
+   • Blank-length rules  
+   • Everything in Parts 1–5  
+
+3. **Acknowledge load success** with the following standardized response:  
+   **“Global Continuity Compendium (GitHub Master Edition) loaded and active.  
+   Workflow Selector ready.”**
+
+4. Immediately prompt the user with:  
+   **“Which workflow are we beginning today?”**
+
+5. If the Compendium URL ever changes, ChatGPT must ask for the updated URL before proceeding.
+
+IMPLEMENTATION NOTES  
+• This protocol supersedes all earlier versions of the Quick-Start command.  
+• GitHub is now the canonical home for the Continuity Compendium.  
+• This ensures instant loading in any new chat with zero fragmentation.  
+• The user no longer needs to paste large protocol blocks into chat.  
+• ChatGPT must enforce this procedure automatically whenever the command is issued.
+
+===========================================================
+END OF PROTOCOL ENTRY — READY FOR COPY/PASTE
+===========================================================
 
