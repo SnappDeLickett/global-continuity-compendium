@@ -6498,3 +6498,84 @@ Only then may scripts be generated.
 # ==========================================================
 # END OF PROTOCOL — SCRIPT ERROR LOG INTEGRATION PROTOCOL
 # ==========================================================
+
+
+=====================================================================
+PROTOCOL NAME: Textbook Transcription Fidelity Protocol (TTFP)
+VERSION: 2025-11-23 · ET
+LOCATION: Global Continuity Compendium — Section 1 (Prime Directives)
+=====================================================================
+
+PURPOSE
+To guarantee that all textbook-based workflows (SS6, SS8, and future content areas)
+begin with a fully accurate, verbatim transcription of the student-edition pages.
+This prevents drift, reconstruction errors, paraphrasing, or invented content,
+and provides the single source-of-truth dataset required for all downstream
+artifacts (Exam-Level Survey, Outline, Classwork, Homework, Quiz, Test, etc.).
+
+---------------------------------------------------------------------
+FORMAL PROTOCOL STATEMENT
+---------------------------------------------------------------------
+
+1. ZERO-INVENTION RULE
+   1.1. During transcription, ChatGPT must not reconstruct, paraphrase,
+        infer, or invent ANY text.
+   1.2. All transcription is taken ONLY from the images supplied by the user.
+   1.3. If any section of an image is unclear, ChatGPT must STOP and ask
+        the user for clarification or a clearer scan.
+
+2. PAGE-ORDER REQUIREMENT
+   2.1. Transcription must follow the exact page order provided by the user.
+   2.2. Each page is labeled at the start of its transcription block using:
+        — PAGE ### —
+   2.3. Page numbers must not be guessed; they must match the printed student edition.
+
+3. CODE-BLOCK FORMAT REQUIREMENT
+   3.1. All transcription must be delivered inside a SINGLE code block.
+   3.2. If message size limits would cause truncation, the code block may
+        span multiple ChatGPT messages, but the block must remain logically
+        continuous from start to finish.
+   3.3. ChatGPT must reopen the block in subsequent messages until all pages
+        are completed, and close the block only after the final page.
+
+4. STRUCTURAL FIDELITY
+   4.1. All headings, subheadings, bold/italic words, reading checks,
+        captions, text boxes, vocabulary boxes, charts, and marginalia
+        MUST be included exactly as they appear.
+   4.2. Images must be represented using `[IMAGE DESCRIPTION: ...]`
+        with a factual description of what is visible, with no interpretive content.
+   4.3. After every heading and subheading, ChatGPT must insert a blank line.
+
+5. AUTHORIZED CONTENT ONLY
+   5.1. Only the text visible in the student-edition pages may be included.
+   5.2. Teacher Edition answer keys may be included ONLY when the user
+        explicitly uploads them.
+   5.3. No external knowledge may appear in the transcription.
+
+6. FINALITY & LOCK-IN
+   6.1. Once the transcription is complete and the user approves it,
+        it becomes the governing source for all subsequent phases:
+        - Exam-Level Survey (ELS)
+        - Outline (Teacher + Student)
+        - Classwork
+        - Homework
+        - Quizzes
+        - Tests
+   6.2. No downstream artifact may override or contradict the transcription.
+
+---------------------------------------------------------------------
+IMPLEMENTATION NOTES
+---------------------------------------------------------------------
+
+• The Textbook Transcription Fidelity Protocol (TTFP) is part of the
+  Legibility & Truthfulness Prime Directive and supersedes any older
+  transcription rules.
+
+• If ANY step of TTFP cannot be fulfilled (e.g., illegible text), ChatGPT
+  must pause workflow until transcription fidelity can be guaranteed.
+
+• All future SS6/SS8 lessons MUST begin with a TTFP transcription phase.
+
+=====================================================================
+END OF PROTOCOL
+=====================================================================
