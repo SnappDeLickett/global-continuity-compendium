@@ -6802,3 +6802,146 @@ FORMAL PROTOCOL STATEMENT
 =====================================================================
 END OF PROTOCOL
 =====================================================================
+
+
+====================================================================
+PROTOCOL ENTRY — Output Auto-Segmentation & Non-Interruption Rule
+Version: 2025-11-23 · 16:50 ET
+====================================================================
+
+### PURPOSE
+To eliminate workflow interruptions caused by ChatGPT asking whether to break long outputs into multiple parts, and to ensure seamless delivery of large artifacts (outlines, surveys, scripts, transcription blocks, etc.) without user prompts.
+
+### RULE
+1. ChatGPT must **never** ask the user whether to break an output into parts.
+2. When an output risks truncation, freezing, lag, or tool-token overflow, ChatGPT must:
+   - Detect this automatically.
+   - Inform the user: “This output is large; I am breaking it into Parts.”
+   - Begin generating **Part 1 of X**, continue sequentially, and complete the entire artifact.
+3. All segmentation must be:
+   - Seamless  
+   - Clearly labeled  
+   - Automatically continued until finished  
+4. ChatGPT must preserve formatting, numbering, headers, and structural integrity across parts.
+5. This rule applies universally to:
+   - Teacher & Student Outlines  
+   - Exam-Level Surveys  
+   - Classwork/Homework  
+   - Quizzes/Tests  
+   - Google Apps Scripts  
+   - Protocol Drafts  
+   - Transcriptions  
+   - Any artifact that exceeds single-pass capacity
+
+### IMPLEMENTATION NOTES
+- Segmentation is triggered automatically when ChatGPT detects that an artifact is long enough to risk truncation.  
+- No permission, confirmation, or question may be asked regarding segmentation.  
+- The only allowed notification is a single sentence alerting the user and then proceeding.  
+- All continuing parts must begin with:  
+  **“(Part X of Y — continuing seamlessly)”**
+- All parts must end with either a continuation notice or confirmation of completion.
+
+====================================================================
+END OF PROTOCOL ENTRY
+====================================================================
+
+
+
+====================================================================
+PROTOCOL ENTRY — Full-Script Replacement Requirement
+Version: 2025-11-23 · 16:52 ET
+====================================================================
+
+### PURPOSE
+To prevent user frustration caused by having to locate broken portions of large Apps Scripts or manually hunt through hundreds of lines of code to apply partial fixes.
+
+### RULE
+1. When the user reports a script defect, ChatGPT must always generate a **complete, corrected, fully merged, ready-to-paste script**.
+2. ChatGPT must **not**:
+   - Provide patches  
+   - Provide “diffs”  
+   - Ask the user to search for a function  
+   - Ask the user to locate broken lines  
+3. If a fix affects only a specific function, ChatGPT may *internally* patch that function, but must deliver a **full script** containing that corrected block in the proper location.
+4. The script delivered must:
+   - Include all previous fixes  
+   - Include all protocol-mandated front-matter  
+   - Pass internal PCEE + PAEE  
+   - Be consistent with the Compendium’s requirements for formatting, outlines, and highlighting  
+
+### IMPLEMENTATION NOTES
+- For clarity, ChatGPT *may* optionally show a “patch rationale” section, but the user must never be asked to apply patches manually.  
+- The Script Error Log should be updated each time a bug pattern is identified (see companion SEL entry).  
+- This rule applies to:
+   - Outline generators  
+   - Form generators  
+   - Vocabulary automators  
+   - Multi-unit exam generators  
+   - Any Apps Script produced in any workflow mode
+
+====================================================================
+END OF PROTOCOL ENTRY
+====================================================================
+
+
+
+====================================================================
+PROTOCOL ENTRY — Outline Header Compliance Rule
+Version: 2025-11-23 · 16:54 ET
+====================================================================
+
+### PURPOSE
+To enforce consistency across all SS6 and SS8 outlines by requiring the standardized student information header at the top of *every* outline, both Teacher and Student versions.
+
+### RULE
+1. All Social Studies outlines must begin with:  
+   **Name: __________________________________     Date: _____________     #: ___________**
+2. This must appear on:
+   - Teacher Outline  
+   - Student Outline  
+   - Any derivative outline (review sheets, combined lessons, unity exams)
+3. Below that line, the title line must appear exactly as:  
+   **[Lesson Title] — Outline**  
+   and for Teacher:  
+   **[Lesson Title] — Outline (Teacher)**
+
+### IMPLEMENTATION NOTES
+- This rule supersedes all previous versions where Teacher Outlines were exempt.  
+- ChatGPT may never omit this line.  
+- This must appear **before** Standards, Practices, Vocabulary, or any body section.
+
+====================================================================
+END OF PROTOCOL ENTRY
+====================================================================
+
+
+
+====================================================================
+PROTOCOL ENTRY — Vocabulary Blanking & Highlighting Rules (Revision)
+Version: 2025-11-23 · 16:56 ET
+====================================================================
+
+### PURPOSE
+To formalize the updated vocabulary formatting method established during SS8-T10-L1, ensuring all vocabulary items are consistent with the best-practice examples provided by the user.
+
+### RULE
+1. Vocabulary bullets must follow the pattern:  
+   - Rich definitional stem  
+   - With **BOLD ALL-CAPS** blanks representing core missing terms  
+2. The vocabulary term itself **must not** be in ALL CAPS unless it is the missing word.  
+3. The stem must preserve enough context to allow students to infer meaning.  
+4. Vocabulary blanks must follow the same VOBS blank-creation logic used in outline bullets.
+
+### IMPLEMENTATION NOTES
+- The examples the user provided (e.g., “lode: a rich vein of **GOLD** or **SILVER** found in rock.”) are now canonical.
+- This applies to:
+   - Outlines  
+   - CW/HW  
+   - Quizzes  
+   - Tests  
+   - Review sheets  
+- Student version uses proportional blanks; teacher version uses bold+yellow highlight.
+
+====================================================================
+END OF PROTOCOL ENTRY
+====================================================================
