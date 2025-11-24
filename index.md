@@ -6945,3 +6945,166 @@ To formalize the updated vocabulary formatting method established during SS8-T10
 ====================================================================
 END OF PROTOCOL ENTRY
 ====================================================================
+
+=====================================================================
+NEW PROTOCOL SET — 2025-11-23 — 20:04 ET  
+SS8 / SS6 / ELA6 / ELA7 — UNIVERSAL APPLICATION  
+=====================================================================
+
+# 1. CFEP — COMPENDIUM FETCH ENFORCEMENT PROTOCOL  
+**Purpose:**  
+Guarantee that the model always operates with the *current*, *complete*, and *correct* Global Continuity Compendium and Script Error Log before generating any artifact.
+
+**Rule:**  
+Before generating **any** artifact (outline, classwork, homework, quiz, test, script, survey), the model must:
+
+1. Fetch the most recent version of:  
+   - `index.md` (Global Continuity Compendium)  
+   - `script-error-log.md` (Error Log)
+
+2. Attempt the fetch **three times** before declaring failure.  
+   - If attempt #1 fails → immediately retry  
+   - If attempt #2 fails → immediately retry  
+   - If attempt #3 fails → halt workflow and notify the user
+
+3. If all three attempts fail:  
+   - The model must request user-provided copies from Google Drive  
+   - Workflow remains halted until user supplies the backup text  
+
+4. After successful retrieval, the model must:  
+   - Re-read the Compendium fully  
+   - Reinitialize PCEE + PAEE  
+   - Apply all rules **before** generating any output
+
+**Implementation Notes:**  
+- System “file upload” false-positives must be ignored.  
+- Only successful web fetch counts as a valid Compendium load.  
+- No artifact may proceed without a successful Compendium load.
+
+=====================================================================
+
+# 2. LBE-PX — LENGTH-BALANCED ENFORCEMENT (PRECISION & EXTENDED)  
+**Purpose:**  
+Eliminate “giveaway” correct answers by enforcing strict balance between correct and distractor choices.
+
+**Rule:**  
+All multiple-choice items must satisfy the following simultaneously:
+
+1. **Equal Word Count:**  
+   All four answer choices must have equal word count (±0 words).
+
+2. **Equal Character Count:**  
+   All four choices must fall within **±2 characters** of one another.
+
+3. **Equal Grammatical Structure:**  
+   All choices must match part-of-speech structure (noun phrase vs. clause, etc.).
+
+4. **Equal Semantic Weight:**  
+   No choice may contain unusually specific or detailed language that makes the correct answer stand out.
+
+5. **No Patterning:**  
+   The correct answer may not systematically appear as:  
+   - the longest  
+   - the shortest  
+   - the most concrete  
+   - the only proper noun  
+   - the only one with modifiers  
+   - the only one with action verbs  
+   - the only one with an abstract noun  
+
+6. **Two-Stage Balancing:**  
+   Balancing must occur **before** AND **after** text-fidelity checks.
+
+**Implementation Notes:**  
+- Items failing any of the above must be rewritten.  
+- CPCC loops must continue until full compliance is achieved.
+
+=====================================================================
+
+# 3. THREE-ATTEMPT RETRIEVAL RULE  
+**Purpose:**  
+Prevent workflow collapse from temporary connection or system failures.
+
+**Rule:**  
+For every required GitHub fetch, the model must:
+
+- Attempt #1 → immediate  
+- Attempt #2 → immediate retry  
+- Attempt #3 → final retry  
+
+Only after all three fail may workflow halt and request user backup.
+
+=====================================================================
+
+# 4. AUTO-REPAIR RULE  
+**Purpose:**  
+Prevent the model from asking the user to confirm protocols that already exist.
+
+**Rule:**  
+If the model detects that it has violated a protocol (e.g., length imbalance, missing fidelity, misplaced Bloom’s section, etc.):
+
+1. The model must autonomously repair the violation.  
+2. The model must NOT ask the user:  
+   “Do you want me to fix this?”  
+   “Should I do X?”  
+   “Do you want Option A or B?”  
+3. The model must continue until all protocols are satisfied.  
+4. The model must inform the user that an auto-repair was performed.
+
+=====================================================================
+
+# 5. AUTO-CONTINUE (NO PROMPTING NEEDED) RULE  
+**Purpose:**  
+Prevent stalls in long workflows.
+
+**Rule:**  
+Unless the model hits a system-imposed output limit, it must:
+
+- Continue automatically through multi-part outputs  
+- Complete entire artifacts without asking “Should I proceed?”  
+- Only pause when physically forced by token or output restrictions  
+- When pausing, mark segments clearly (e.g., “PART 1 → PART 2 → PART 3”)  
+- Immediately continue with the next part in the following message
+
+=====================================================================
+
+# 6. FULL-SENTENCE TEXT FIDELITY RULE  
+**Purpose:**  
+Preserve absolute accuracy to the student textbook.
+
+**Rule:**  
+Feedback must contain:
+
+- The **entire sentence or sentences** in which the answer appears  
+- Directly quoted  
+- No ellipses  
+- No shortening  
+- No paraphrasing  
+- No rephrasing  
+- No clause extraction  
+- No omissions  
+
+**Implementation Notes:**  
+- If the answer spans multiple consecutive sentences, the entire string must be included.  
+- Page numbers must accompany each citation.
+
+=====================================================================
+
+# 7. CHARACTER-COUNT MATCHING REQUIREMENT  
+**Purpose:**  
+Ensure visual parity among answer choices so that none stand out.
+
+**Rule:**  
+In addition to LBE-PX word-count balancing:
+
+- All answer choices must fall within **±2 characters**  
+- Character count includes spaces and punctuation  
+- Final character-count sweep occurs after all other editing steps
+
+=====================================================================
+END OF NEW PROTOCOL INSERTION BLOCK
+=====================================================================
+
+
+
+
