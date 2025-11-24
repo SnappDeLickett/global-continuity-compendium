@@ -12,4 +12,10 @@ See below for known errors:
 | 2025-11-15 18:57     | E7_WG_Ch25_27_Quiz v1                         | Exception: This operation cannot be called on a KeyValueItem               | Attempted to convert non-gradeable item to gradeable using `.asGradeableItem()`.       | Remove all `.asGradeableItem()` calls from non-question items.                        | CLOSED  |
 
 
-"Monkey Salad"
+
+| 2025-11-23 16:55 | SS8-T10-L1 Outline Script (Teacher/Student) | No execution error (logic/formatting defect): bold formatting extended beyond answer tokens in teacher outline. | fillTextWithTokens_() applied bold to the token range but never explicitly cleared bold/background on subsequent text, so formatting state carried into following words. | Rewrote fillTextWithTokens_() v2 to: (1) insert token text, (2) set bold + yellow only on the exact token range, and (3) explicitly set bold=false and background=null for all non-token segments, preventing spillover. | CLOSED |
+| 2025-11-23 17:00 | SS8-T10-L1 Outline Script (Teacher/Student) | No execution error (logic/formatting defect): standardized Name/Date/# header line missing from Teacher Outline document. | createOutlineDoc_() incorrectly applied the student information header only to the Student Outline path, violating the universal header requirement for all SS outlines. | Updated createOutlineDoc_() v3 so both Teacher and Student outlines begin with the standard header line `Name: __________________________________     Date: _____________     #: ___________` before the title and standards sections. | CLOSED |
+| 2025-11-23 17:05 | SS8-T10-L1 Outline Script (Teacher/Student) | No execution error (logic/formatting defect): vocabulary items generated with inconsistent ALL-CAPS terms and weak stems, not matching VOBS-style contextual blanking. | Vocabulary section logic treated entire terms as ALL-CAPS labels rather than embedding key words as targeted blanks within rich definitional stems, causing format drift from the agreed VOBS pattern. | Revised the vocabulary dataset and generation rules so each vocab line uses a strong stem with **BOLD ALL-CAPS** tokens for key missing words, and student versions convert those tokens to proportional blanks while teacher versions highlight them yellow. | CLOSED |
+
+
+
