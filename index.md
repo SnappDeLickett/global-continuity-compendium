@@ -6579,3 +6579,142 @@ IMPLEMENTATION NOTES
 =====================================================================
 END OF PROTOCOL
 =====================================================================
+
+=====================================================================
+PROTOCOL NAME: Vocabulary & Outline Blanked-Stem System (VOBS Protocol)
+VERSION: 2025-11-23 · ET
+LOCATION: Global Continuity Compendium — Core Instructional Protocols
+=====================================================================
+
+PURPOSE
+To define a unified and pedagogically sound system for creating blanks 
+in both Vocabulary Sections and Outline Bodies in all Social Studies 
+Teacher Outlines and Student Outlines. The purpose is to ensure 
+consistent scaffolded comprehension, eliminate oversized blanks, 
+maintain strict text fidelity, and support all students through a 
+clear “reading handrail” design.
+
+=====================================================================
+SECTION A — UNIVERSAL BLANK-STEM DESIGN RULES
+=====================================================================
+
+1. STEM-FIRST DESIGN
+   1.1. Every vocabulary definition or outline bullet must begin with a 
+        meaningful, text-based stem that carries the comprehension load.
+   1.2. Stems must be rich enough to support understanding but concise 
+        enough for middle-school readability.
+   1.3. The stem may not be a tiny fragment or a multi-sentence summary. 
+        It must express exactly one idea.
+
+2. SHORT, ESSENTIAL BLANKS
+   2.1. Blanks (Teacher: BOLD ALL CAPS; Student: proportional underline) 
+        must contain only the 1–3 most essential words from the idea.
+   2.2. No blank may exceed three words. Ever.
+   2.3. No blank may contain long noun phrases, clauses, or multi-part 
+        reconstructed ideas.
+   2.4. Blank words must come directly and explicitly from the student 
+        edition text (Text Fidelity Rule).
+   2.5. If the “meaning” of a concept requires more than 3 words, the 
+        stem must be rewritten to carry the load, NOT the blank.
+
+3. ONE-IDEA-ONLY RULE
+   3.1. Each outline bullet must represent exactly one idea from the 
+        text — never two or three ideas squeezed into a single bullet.
+   3.2. No bullet may begin with a pronoun. Each must begin with a 
+        concrete subject (person, event, law, group, or concept).
+
+4. TEACHER-KEY FORMATTING REQUIREMENTS
+   4.1. Every blank in the Teacher Outline must follow this exact format:
+           __**BOLD ALL CAPS**__
+   4.2. This rule applies equally to everything:
+        - Vocabulary definitions
+        - Orange & green outline bullets
+        - Any embedded short-answer items within outlines
+   4.3. Teacher Outline presents the answer; Student Outline transforms 
+        those answers into properly sized blanks.
+
+5. STUDENT-OUTLINE BLANK DESIGN
+   5.1. All student blanks must be proportional to the number of characters 
+        in the answer (using your established “2× length” rule).
+   5.2. No double underscores may be used (Global Continuity Rule).
+   5.3. Blanks must preserve the visual rhythm of the sentence.
+
+=====================================================================
+SECTION B — VOCABULARY-SPECIFIC RULES
+=====================================================================
+
+6. TERM-PRESENTATION RULE
+   6.1. Vocabulary terms must be written exactly as in the book (normal 
+        capitalization).
+   6.2. Terms are NOT blanks. Students must see the full word.
+   6.3. Exception: A compound term may be partially blanked only when it 
+        improves clarity (e.g., “TRANSCONTINENTAL railroad”), but this 
+        should be used sparingly.
+
+7. STEMMED DEFINITIONS
+   7.1. Every vocabulary item must be defined using a full-sentence stem 
+        that is readable, helpful, and text-based.
+   7.2. The key elements of the definition (1–3 words) become the blanks, 
+        formatted as BOLD ALL CAPS in the Teacher Outline.
+   7.3. The stem must remain complete and comprehensible even with the 
+        blank missing.
+
+8. MULTIPLE BLANKS ALLOWED (LIMIT 3)
+   8.1. When a definition involves two essential components (e.g., GOLD 
+        and SILVER), both may be blanked — but never more than three.
+   8.2. All blanks must remain brief and essential.
+
+=====================================================================
+SECTION C — OUTLINE BODY RULES
+=====================================================================
+
+9. OUTLINE BLANKS FOLLOW VOCABULARY RULES
+   9.1. The same system used for vocabulary blanks must be used for all 
+        blanks in the outline body:
+        - Rich stems
+        - Short, essential blanks
+        - 1–3 words
+        - BOLD ALL CAPS (Teacher)
+        - No invented language
+   9.2. This ensures outlines and vocabulary operate as a unified reading 
+        scaffold rather than two unrelated components.
+
+10. NO LONG OVERLOADED BLANKS
+    10.1. Bullet stems must never end with massive multi-word blanks.
+    10.2. If a blank would contain more than three words, the teacher must 
+          reassign content to the stem and leave only the essential term 
+          in the blank.
+
+11. TEXT FIDELITY ENFORCEMENT
+    11.1. Blanks must reflect exact terms, names, or concepts from the 
+          verified student-edition transcription.
+    11.2. No synonyms. No paraphrasing. No external additions.
+
+=====================================================================
+SECTION D — IMPLEMENTATION & ENFORCEMENT
+=====================================================================
+
+12. PCEE + PAEE INTEGRATION
+    12.1. PCEE must verify that all blanks conform to the 1–3 word rule, 
+          bold-cap format, and text fidelity requirements.
+    12.2. PAEE must confirm that all outline bullets begin with concrete 
+          subjects and follow the Single-Idea Rule.
+
+13. UNIVERSAL APPLICABILITY
+    13.1. The VOBS Protocol applies to:
+          • SS6 outlines
+          • SS8 outlines
+          • All Social Studies vocabulary sections
+          • Any task using Text-Fidelity reading scaffolds
+    13.2. It remains binding unless explicitly superseded by the user.
+
+14. FUTURE-ARTIFACT LOCK
+    14.1. All downstream artifacts (Student Outline, Classwork, Homework, 
+          Quizzes, Tests, Chapter Assessments) must build from VOBS-
+          compliant outlines only.
+    14.2. Violations must trigger an automatic STOP + REQUEST FOR REPAIR.
+
+=====================================================================
+END OF PROTOCOL
+=====================================================================
+
